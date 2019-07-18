@@ -1,26 +1,26 @@
 package guru.springframework.sfgspringbootjokes.controllers;
 
-import guru.springframework.sfgspringbootjokes.services.JokesService;
+import guru.springframework.sfgspringbootjokes.services.JokeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class JokesController {
 
-    private JokesService jokesService;
+    private JokeService jokesService;
 
-    public JokesController(JokesService jokesService) {
+    @Autowired
+    public JokesController(JokeService jokesService) {
         this.jokesService = jokesService;
     }
 
     @RequestMapping({"/", ""})
     public String getJokes(Model model) {
 
-        model.addAttribute("joke", jokesService.getRandomQuote());
+        model.addAttribute("joke", jokesService.getJoke());
 
         return "chucknorris";
     }
-
 }
