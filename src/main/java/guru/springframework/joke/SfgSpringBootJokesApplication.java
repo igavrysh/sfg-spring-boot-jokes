@@ -1,6 +1,5 @@
-package guru.springframework.sfgspringbootjokes;
+package guru.springframework.joke;
 
-import guru.springframework.sfgspringbootjokes.services.JokeServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

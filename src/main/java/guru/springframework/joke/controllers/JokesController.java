@@ -1,6 +1,6 @@
-package guru.springframework.sfgspringbootjokes.controllers;
+package guru.springframework.joke.controllers;
 
-import guru.springframework.sfgspringbootjokes.services.JokeService;
+import guru.springframework.joke.services.JokeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
